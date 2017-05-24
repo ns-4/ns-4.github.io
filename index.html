@@ -141,7 +141,7 @@
                     </a>
                     <div class="portfolio-caption">
                       <h4>Design Overview</h4>
-                      <p class="text-muted">&nbsp;</p>
+                      <p class="text-muted">Show me the workflow</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -245,9 +245,9 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-github"></i></a>
+                        <li><a href="https://github.com/ns-4/NS4"><i class="fa fa-github"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-wechat"></i></a>
+                        <li><a href="img/wechat.jpg"><i class="fa fa-wechat"></i></a>
                         </li>
                       
                     </ul>
@@ -282,19 +282,19 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <p>
-                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                                <ul class="list-inline">
-                                    <li>Date: July 2014</li>
-                                    <li>Client: Round Icons</li>
-                                    <li>Category: Graphic Design</li>
-                                </ul>
+                              <h2>NS4</h2>
+                                <p class="item-intro text-muted">An overview</p>
+                                <img class="img-responsive img-centered" src="img/design.png" alt="">
+                              <p><strong>Overview</strong></p>
+                              <p>NS4 is divided into control plane half and data plane half, which collectively simulate a complete network system with programmable data plane (PDP) . Developers simulate a controller by instantiating a ‘Controller Model‘ and simulate a P4 device by instantiating a ‘Programmable Data Plane Model‘. Traditional devices like router or switch are also supported in NS4 but omitted in the figure.</p>
+                                <p><strong>Workflow</strong><br></p>
+                              <p>The procedures to simulate a P4-enabled network are shown as numbers in figure.</p>
+                                <p align="left">1. configure the behavior of data plane by inputting a compiled P4 program to the P4 pipeline configurator;<br>
+                                2. create control plane and populate table entries to P4 devices, by either implementing a controller application inside the controller model or simply running an arbitrary controller application (such as ONOS) outside NS4;<br>3. add ports (maybe connected to various channels) to the PDP model.<br>4. At this point, we have this PDP model configured and functional as a P4 device. Next steps are building network topology, installing applications at terminal nodes and triggering the simulator.</p>
+                                
+                              
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -316,11 +316,10 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <h2>Project Heading</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                                <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                                <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
+                                <h2>Controller Model</h2>
+                                <p class="item-intro text-muted">The brain of NS4</p>
+                                <img class="img-responsive img-centered" src="img/con.png" alt="">
+                                <p align="left">A controller does not directly manipulate table entries in P4 devices via function calls. Instead, it is created as an independent network component and populates tables to P4 devices via packets transmission, just in the real-world way. Also, we notice the fact that when focusing on simulating P4 devices, developing a controller application just to populate ta- ble entries can be an arduous but unnecessary work, so we make the controller model able to communicate with a controller application running outside NS4 process. This bridge connecting from P4 devices in NS4 process and controllers outside NS4 process eliminates unnecessary work of developing controller applications for simulation environment and also provides a method of testing general controller applications.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
@@ -345,11 +344,10 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                                <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                <h2>Programmable Data Plane Model</h2>
+                                <p class="item-intro text-muted">The essence of NS4</p>
+                                <img class="img-responsive img-centered" src="img/controller.png" alt="">
+                                <p align="left">Unlike fixed-function devices, P4 devices need setting up simulation environment to define their behaviors (see workflow paragraph). The core of the PDP model is a complete P4 pipeline which contains a parser, match-action tables, a deparser and buffers amid them. We then add a channel manager and a packet de/encapsulator beyond link layer to mask details of underlying channels and provide a uniform interface for the P4 pipeline. The channel manager expands the scope of simulatable P4 devices, from devices connected via NICs to ones connected via virtually any channel.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
@@ -374,11 +372,11 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
-                                <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                <h2>Demo</h2>
+                                <p class="item-intro text-muted">Proof of the novel concepts</p>
+                                <img class="img-responsive img-centered" src="img/demo.jpg" alt="">
+                                <p align="left">In order to further demonstrate the effectiveness and convenience of NS4, We orchestrate a user case of a typical campus network miniature with heterogeneous network involved, as depicted in the figure before.<br>
+During demonstration, we plan to demonstrate the detailed process of simulating the campus network as described above using a local laptop. On site, we will provide an interactive user interface for attendees to (1) explore interested information such as perfor- mance statistics (2) dynamically operate NS4 by giv- ing instructions to the simulated network through a user interface. Attendees’ possible instructions can per- form di↵erent types of operations like, changing network topology, configuration of P4 devices, population of ta- bles and many more. The showcase will also demonstrate at length the installation of NS4 environment on Linux operating system, configuration of P4 devices, setting up the controllers, population of table entries, triggering simulator and evaluation of critical and interested statistics in real NS4 usage scenarios.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
@@ -403,11 +401,10 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
-                                <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                <h2>ns-3 Integration</h2>
+                                <p class="item-intro text-muted"></p>
+<!--                                <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">-->
+                                <p>Under development.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
@@ -432,11 +429,11 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
+                                <h2>Others</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
+<!--                                <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
                                 <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>-->
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
